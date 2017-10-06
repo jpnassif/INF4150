@@ -43,7 +43,7 @@ public class ARN extends ArrayList{
             }
             printStatsRNA();
         } else{
-            System.out.println("You are fucked");
+            System.out.println("You have entered an invalid RNA sequence!");
             System.exit(1);
         }
     }
