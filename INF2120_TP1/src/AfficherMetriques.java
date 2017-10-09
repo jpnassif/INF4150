@@ -5,10 +5,10 @@ package tp1;
  * @author Jay
  * @author Dalila
  */
-
+import java.text.DecimalFormat;
 //Calcule et affiche les metriques de la sequence ARN (deja validee precedemment).
 public class AfficherMetriques {
-
+    final static DecimalFormat dec2 = new DecimalFormat("0.00");
     //Variables qui representent le nombre de chaque type d'atome.
     public static int nbAtomeCarbone = 0;
     public static int nbAtomeHydrogene = 0;
@@ -19,7 +19,6 @@ public class AfficherMetriques {
     //Calcule et affiche les metriques de la sequence ARN.
     //@param entree La chaine entree par l'utilisateur.
     public static void calculerMetriquesARN(String entree){
-
         for (int i = 0; i < entree.length(); i++){
             nbAtomeCarbone += InfoNucleotides.compterNbCarbone(entree.charAt(i));
             nbAtomeHydrogene += InfoNucleotides.compterNbHydrogene(entree.charAt(i));
@@ -36,6 +35,6 @@ public class AfficherMetriques {
         System.out.println("Nombre d'atomes d'Hydrogène: " + nbAtomeHydrogene);
         System.out.println("Nombre d'atomes d'Azote: " + nbAtomeAzote);
         System.out.println("Nombre d'atomes d'Oxygène: " + nbAtomeOxygene);
-        System.out.println("Masse molaire totale du ARN: " + masseMolaireTotale + " g/mol");
+        System.out.println("Masse molaire totale du ARN: " + dec2.format(masseMolaireTotale) + " g/mol");
     }
 }
