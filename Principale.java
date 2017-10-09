@@ -21,18 +21,18 @@ public class Principale {
      */
     public static void main(String[] args) {
 
-        //Demande un chaine d'ARN a l'utilisateur.
+        //Demande une chaine d'ARN a l'utilisateur.
         Scanner userInput = new Scanner (System.in);
         System.out.print( "Veuillez entrer une chaine ARN valide: " );
-        String stringARN = userInput.next();
+        String chaineARN = userInput.next();
 
         //Valide la chaine.
-        ValiderARN.estARN(stringARN);
+        ValiderARN.estARN(chaineARN);
 
         //Calcule et affiche les metriques.
-        AfficherMetriques.calculerMetriquesARN(stringARN);
+        AfficherMetriques.calculerMetriquesARN(chaineARN);
 
-        //Demande une requete de recherche.
+        //Demande une requête de recherche d'ARN.
         System.out.print( "Veuillez spécifier une requête de recherche: " );
         String requete = userInput.next();
 
@@ -41,9 +41,9 @@ public class Principale {
 
         //Affiche les resultats de la recherche.
         if (ValiderRequete.estRequeteAcideAmine(requete)) {
-            ResultatsRequeteAcideAmine.afficherResultatsRequeteAcideAmine(stringARN, requete);
+            ResultatsRequeteAcideAmine.requeteAcideAmine(chaineARN, requete);
         } else {
-            ResultatsRequeteSuiteNucleo.afficherResultatsRequeteSuiteNucleo(stringARN, requete);
+            ResultatsRequeteSuiteNucleo.requeteSuiteNucleo(chaineARN, requete);
         }
 
         //Termine le programme.
