@@ -1,0 +1,167 @@
+body {
+  font-family: Tahoma;
+}
+
+header {
+  text-align: center;
+}
+
+#calendar {
+  width: 80%;
+  margin: auto;
+}
+
+#calendar a {
+  color: #666699;
+  text-decoration: none;
+}
+
+#calendar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#calendar li {
+  display: block;
+  float: left;
+  width: 14.342%;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+
+#calendar ul.weekdays {
+  height: 40px;
+  background: #666699;
+}
+
+#calendar ul.weekdays li {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 20px;
+  border: none !important;
+  padding: 10px 6px;
+  color: #fff;
+  font-size: 13px;
+}
+
+#calendar .days li {
+  height: 180px;
+}
+
+#calendar .days li:hover {
+  background: #f5f5f5;
+}
+
+#calendar .dateDad {
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 4px;
+  background: #333;
+  color: #ccddff;
+  width: 20px;
+  border-radius: 50%;
+  float: right;
+}
+
+#calendar .dateMom {
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 4px;
+  background: #333;
+  color: #ff6699;
+  width: 20px;
+  border-radius: 50%;
+  float: right;
+}
+
+#calendar .dateSchool {
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 4px;
+  color: #333;
+  width: 20px;
+  border-radius: 50%;
+  float: left;
+}
+
+#calendar .event {
+  clear: both;
+  display: block;
+  font-size: 12px;
+  border-radius: 4px;
+  padding: 5px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  line-height: 14px;
+  background: #e4f2f2;
+  border: 1px solid #b5dbdc;
+  color: #009aaf;
+  text-decoration: none;
+}
+
+#calendar .event-desc {
+  position:relative;
+  color: #666;
+  margin: 3px 0 7px 0;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+#calendar .event-desc span{display: none}
+
+#calendar .event-desc:hover span{ /*the span will display just on :hover state*/
+  z-index: +1; position:relative;
+  
+  text-align: left;
+  clear: both;
+  display: block;
+  font-size: 11px;
+  border-radius: 4px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 12px;
+  background: #badede;
+  border: 1px solid #b5dbdc;
+  color: #666;
+  text-decoration: none;
+  }
+
+#calendar .event-time {
+  position:relative;
+  color: #666;
+  margin: 3px 0 7px 0;
+  text-decoration: none;
+}
+
+
+#calendar .other-month {
+  background: #d3d3d3;
+  color: #666;
+}
+
+/* ============================
+				Mobile Responsiveness
+   ============================*/
+@media (max-width: 768px) {
+  #calendar .weekdays, #calendar .other-month {
+    display: none;
+  }
+
+  #calendar li {
+    height: auto !important;
+    border: 1px solid #ededed;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: -1px;
+  }
+
+  #calendar .date {
+    float: none;
+  }
+}
